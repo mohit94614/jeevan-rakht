@@ -33,3 +33,20 @@ $(".input-when[type=date]").blur(function() {
         $(this).attr('placeholder', 'When');
     }
 });
+// 
+$(".input-donation-date").flatpickr({
+    dateFormat: 'd/m/Y',
+});
+
+$(".input-donation-date[type=date]").blur(function() {
+    if ($(this).val()) {
+        $(this).attr('placeholder', '');
+    } else {
+        $(this).attr('placeholder', 'Last Donation Date');
+    }
+});
+
+// Fixing select placeholder issue
+$("select.empty").change(function() {
+    $(this).removeClass('empty');
+})
