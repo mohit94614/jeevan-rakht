@@ -33,6 +33,7 @@ $(".input-when[type=date]").blur(function() {
         $(this).attr('placeholder', 'When');
     }
 });
+<<<<<<< HEAD
 // 
 $(".input-donation-date").flatpickr({
     dateFormat: 'd/m/Y',
@@ -51,3 +52,5 @@ $(".input-donation-date[type=date]").blur(function() {
 $("select.empty").change(function() {
     $(this).removeClass('empty');
 })
+=======
+>>>>>>> parent of f367167... Merge branch 'master' of https://github.com/UdacityFrontEndScholarship/jeevan-rakht

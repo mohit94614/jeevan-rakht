@@ -19,9 +19,7 @@ var UserAccount = new Schema({
         required: true
     },
     indiv: {
-        name: { type: String }, 
-        first_name: { type: String },  
-        last_name :{ type: String }, 
+        name: { type: String },
         indiv_type: { type: String },
         age: { type: Number, min: 18, max: 65 },
         blood_grp: { type: String },    
@@ -32,7 +30,6 @@ var UserAccount = new Schema({
         weight:{ type: Number },                    
         appointment : {
                         appointment_date: { type: Date },  
-                        donor_city :{ type: String } ,
                         blood_bank_id :{ type: mongoose.Schema.Types.ObjectId } 
                     }
     },
@@ -56,7 +53,6 @@ var UserAccount = new Schema({
         type: Array
     },
     address: {
-        addr_type: { type: String },
         addr_line1: { type: String },
         addr_line2: { type: String },
         city: { type: String },

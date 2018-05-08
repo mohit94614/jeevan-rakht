@@ -6,6 +6,7 @@
       
       {{>header}}
 
+<<<<<<< HEAD
       <section class="container my-5">
         {{#successMessage}}
         <div class="alert alert-success text-center">{{successMessage}}</div>
@@ -13,14 +14,18 @@
         {{#alertMessage}}
         <div class="alert alert-danger text-center">{{alertMessage}}</div>
         {{/alertMessage}}                                
+=======
+      <section class="container d-flex flex-column flex-wrap align-items-center my-5">
+>>>>>>> parent of f367167... Merge branch 'master' of https://github.com/UdacityFrontEndScholarship/jeevan-rakht
         <div class="main-content zi-1">
         
           <a href="/" class="back-arrow">
             <i class="fas fa-arrow-left"></i>
           </a>
         
-          <div class="content-wrapper">
+          <div class="donate-wrapper">
             <h2><strong>DONATE</strong> Blood</h2>
+<<<<<<< HEAD
             
             <form method="POST">
               <div class="row donate-input-row">
@@ -36,13 +41,28 @@
                     <input class="input-when" name="bookdate" value="{{bookdate}}" title="When" placeholder="When" required>
                     <i class="far fa-calendar-alt"></i>
                   </div>
+=======
+        
+            <div class="row donate-input-row">
+              <div class="col-md-8 py-0 px-0 px-sm-3">
+                <div class="input-wrapper input-wrapper-lg">
+                  <input type="text" autocomplete="off" class="input-location typeahead" class="typeahead" data-provide="typeahead" placeholder="Location">
+                  <i class="fas fa-map-marker-alt"></i>
                 </div>
               </div>
-          
-              <button class="btn-link">BOOK</button>
-            </form>
+        
+              <div class="col-md-4 py-0 px-0 px-sm-3">
+                <div class="input-wrapper input-wrapper-lg">
+                  <input class="input-when" placeholder="When">
+                  <i class="far fa-calendar-alt"></i>
+>>>>>>> parent of f367167... Merge branch 'master' of https://github.com/UdacityFrontEndScholarship/jeevan-rakht
+                </div>
+              </div>
+            </div>
+        
+            <button class="book-btn">BOOK</button>
           </div>
-          <!-- End content-wrapper -->
+          <!-- End donate-wrapper -->
         
         </div>
         <!-- End main-content -->

@@ -36,6 +36,7 @@ router.get('/', function(req, res, next) {
             }			        
             res.render('profile/verifyemail_finish',
             { title: 'Email verified'
+            ,partials: partials
             ,alertMessage: 'Your email is verified successfully.'
             });
           });

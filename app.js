@@ -7,7 +7,7 @@ var sassMiddleware = require('node-sass-middleware');
 var cookieSession = require('cookie-session');
 var flash = require('connect-flash');
 var Keygrip = require('keygrip')
-var expressValidator = require('express-validator');
+
 var mainRouter = require('./routes/main/app');
 var locateRouter = require('./routes/main/locate');
 var donateRouter = require('./routes/main/donate');
@@ -42,16 +42,12 @@ app.set('partials', {
     footer: 'partials/footer',
     utilityJS: 'partials/utilityJS',
     oauth2_btns: 'partials/oauth2_btns',
-    oauth2_ajax: 'partials/oauth2_ajax',
-    user_address: 'partials/user_address',
-    profile: 'partials/profile',
-    google_mapJS: 'partials/google_mapJS'
+    oauth2_ajax: 'partials/oauth2_ajax'
 });
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(expressValidator());
 // trust first proxy, remove below line when deploying in order to secure cookies over https connection
 app.set('trust proxy', 1)
 app.use(cookieSession({
@@ -84,16 +80,6 @@ app.use(function(req, res, next) {
                 delete req.user.password;
                 req.session.user = user;  // refresh the session value
                 res.locals.user = user;   // expose the user to the template  
-                let activeUser = false;
-                let indivUser = false;
-                if(user.active_flag === 'A'){
-                    activeUser = true;     
-                }
-                if(user.user_type === 'Individual'){
-                    indivUser = true;     
-                }                
-                res.locals.activeUser = activeUser;
-                res.locals.indivUser = indivUser;
                 next();
             } else if (!user) {
                 next();

@@ -2,10 +2,9 @@ var express = require('express');
 var router = express.Router();
 var moment = require('moment');
 var { login_required } = require('../../utils/authValidator');
-var { profile_validator } = require('../../utils/formValidators');
-var { updateUser } = require('../../controllers/userController');
 
 router.get('/', login_required, function(req, res, next) {
+<<<<<<< HEAD
     let obj = {};
     obj.title      = 'Profile';
     obj.firstname   = req.user.indiv.last_name;
@@ -59,6 +58,14 @@ router.post('/',
             res.send('delete profile');
         }
     });
+=======
+    res.render('profile/users', { title: 'Profile' });
+});
+
+router.put('/', function(req, res, next) {
+    res.send('update profile');
+});
+>>>>>>> parent of f367167... Merge branch 'master' of https://github.com/UdacityFrontEndScholarship/jeevan-rakht
 
 router.delete('/', function(req, res, next) {
     res.send('delete profile');
