@@ -1,9 +1,10 @@
 const UserAcct = require('../models/user');
 const bcrypt = require('bcryptjs');
+var moment = require('moment');
 
 var signupUser = function(usrObj, callback) {
     var newUser = new UserAcct(usrObj);
-    bcrypt.genSalt(11, function(err, salt) {
+    bcrypt.genSalt(10, function(err, salt) {
         if (err) {
             console.log('Some error occured while salting.', err);
             callback(err, undefined);
@@ -137,7 +138,12 @@ var updatePassword = function(userObj, callback) {
         if (err) {
             callback(err, undefined);
         } else if (result) {
-            var salt = bcrypt.genSaltSync(10);
+        bcrypt.genSalt(10, function(err, salt) {
+            if (err) {
+                console.log('Some error occured while salting.', err);
+                callback(err, undefined);
+                return;
+            }                    
             bcrypt.hash(userObj.password, salt, function(err, hash) {
                 if (err) {
                     callback(err, undefined);
@@ -154,20 +160,68 @@ var updatePassword = function(userObj, callback) {
                     });
                 }
             });
+        });
         } else if (!result) {
             callback(undefined, undefined);
         }
     });
 }
 
+<<<<<<< HEAD
 var updateUser = function() {}
+=======
+var updateUser = function(userObj, callback) {
+    var  item ={
+        indiv: {
+            name: userObj.firstname + ' ' + userObj.lastname,
+            first_name: userObj.firstname,  
+            last_name : userObj.lastname, 
+            age: userObj.age,
+            blood_grp: userObj.bloodgroup,
+            gender: userObj.gender,        
+            last_donation: moment(userObj.last_donation,'DD/MM/YYYY').format('MM/DD/YYYY'),                
+            height: userObj.height,    
+            weight: userObj.weight                    
+        },
+        non_indiv: {
+            org_name: userObj.orgname,
+            license: userObj.license,
+            unit_stock: userObj.stock
+        },
+        mobile: userObj.mobile,
+        address: {
+            addr_type: userObj.addrtype,
+            addr_line1: userObj.address1,
+            addr_line2: userObj.address2,
+            city: userObj.city,
+            state: userObj.state,
+            pincode: userObj.zip,
+            place_id: userObj.place_id,
+            coordinates: {
+                    latdec: userObj.lat,
+                    londec: userObj.lng
+                }
+        },    
+        updated : Date.now() 
+    };
+    UserAcct.findByIdAndUpdate(userObj.id, { $set: item }, function(err, result) {
+        if (err) {
+            callback(err, undefined);
+        } else if (result) {
+            callback(undefined, result);
+        } else if (!result) {
+            callback(undefined, undefined);
+        }
+    });    
+}
+>>>>>>> 26c57906a95d83d596bfbc62817132a9a246d75c
 
-var bookAppointment = function(userObj, callback) {
-    var  item ={"indiv.appointment.appointment_date": userObj.bookdate,  
+var bookAppointment = function(userObj, callback) {    
+    var  item ={"indiv.appointment.appointment_date": moment(userObj.bookdate,'DD/MM/YYYY').format('MM/DD/YYYY'),
                 "indiv.appointment.donor_city" : userObj.bookcity,
-                updated : Date.now() 
+                "updated" : Date.now() 
             };
-    UserAcct.findByIdAndUpdate(userObj.id, { $set: {item} }, function(err, result) {
+    UserAcct.findByIdAndUpdate(userObj.id, { $set: item }, function(err, result) {
         if (err) {
             callback(err, undefined);
         } else if (result) {

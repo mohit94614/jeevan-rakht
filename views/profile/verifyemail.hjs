@@ -2,9 +2,9 @@
 <html>
     {{>head}}
     <body id="particles-js" m-md-3>
-        <!-- Main content goes here -->      
-        <div class="container vh-100 d-flex flex-column justify-content-between">
+        <div class="vh-100 d-flex flex-column justify-content-between">
           {{>header}}
+<<<<<<< HEAD
         <section id="main" class="zi-1 text-center bg-light">
       <!-- Your code goes here --> 
         {{#alertMessage}}
@@ -25,9 +25,36 @@
               <a href="/"><button type="button" class="btn btn-secondary">Cancel</button></a>
           <br>                
           </form>
+=======
+        <!-- Your code goes here --> 
+        <section class="container my-5">
+            {{#alertMessage}}
+            <div class="alert alert-danger text-center zi-1">{{alertMessage}}</div>
+            {{/alertMessage}}            
+            <div class="main-content zi-1">
+                <a href="/users" class="back-arrow">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+
+                <div class="content-wrapper">
+                    <h2 class="text-uppercase"><strong>Verify Email</strong></h2>            
+                
+                    <form method="POST" class="box-350 mt-5">	
+                        <div class="input-wrapper input-wrapper-lg">
+                            <input type="email" name="email" id="email" value ="{{user.email}}" readonly placeholder="email">
+                            <i class="far fa-envelope"></i>
+                        </div>   
+
+                        <button type="submit" class="btn-link w-100 mt-4">Send Verification Link</button> 
+                    </form>
+                </div>
+                <!-- End content-wrapper -->
+            </div>  
+            <!-- End main-content -->
+>>>>>>> 26c57906a95d83d596bfbc62817132a9a246d75c
         </section>
         {{>footer}}
         </div>
         {{>utilityJS}}
-      </body>
-  </html>
+    </body>
+</html>

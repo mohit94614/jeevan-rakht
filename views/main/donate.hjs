@@ -50,6 +50,7 @@
                   <i class="fas fa-map-marker-alt"></i>
                 </div>
               </div>
+<<<<<<< HEAD
         
               <div class="col-md-4 py-0 px-0 px-sm-3">
                 <div class="input-wrapper input-wrapper-lg">
@@ -61,6 +62,11 @@
             </div>
         
             <button class="book-btn">BOOK</button>
+=======
+          
+              <button class="btn-link" id='donate-submit'>BOOK</button>
+            </form>
+>>>>>>> 26c57906a95d83d596bfbc62817132a9a246d75c
           </div>
           <!-- End donate-wrapper -->
         

@@ -12,9 +12,19 @@
                         $('#login, #signup').attr("style","display:none !important");
                         $('#oauth-login-result').attr("style","display:unset");
 						if (result){
+<<<<<<< HEAD
 							$('#oauth-login-result').html('Login Successfull! <br>'+ result+ '<br>Redirecting');
+=======
+							$('#oauth-result-content').html('<p>Login Successful!</p>'+ result + '<p class="loading">Redirecting <span>.</span><span>.</span><span>.</span></p>');
+							var params = new URLSearchParams(window.location.search);
+							var nextURL = params.get('next');
+>>>>>>> 26c57906a95d83d596bfbc62817132a9a246d75c
 							setTimeout(function(){
-								window.location.href="/";
+								if (nextURL){
+									window.location.href=nextURL;		
+								}else{
+									window.location.href="/";
+								}								
 							},4000);
 						}else
 						{
@@ -67,9 +77,19 @@
                 $('#oauth-login-result').attr("style","display:unset");                
 		      // Handle or verify the server response if necessary.
 		      	if(result){
+<<<<<<< HEAD
 			        $('#oauth-login-result').html('Login Successful!</br>'+ result + '</br>Redirecting...')
+=======
+			        $('#oauth-result-content').html('<p>Login Successful!</p>'+ result + '<p class="loading">Redirecting <span>.</span><span>.</span><span>.</span></p>');
+					var params = new URLSearchParams(window.location.search);
+					var nextURL = params.get('next');					
+>>>>>>> 26c57906a95d83d596bfbc62817132a9a246d75c
 			        setTimeout(function() {
-			        		window.location.href = "/";
+						if (nextURL){
+							window.location.href=nextURL;		
+						}else{
+							window.location.href="/";
+						}								
 			        }, 4000);
 			    }
 			    else{

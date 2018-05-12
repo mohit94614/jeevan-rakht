@@ -3,9 +3,10 @@
     {{>head}}
     <body id="particles-js" m-md-3>
         <!-- Main content goes here -->      
-        <div class="container vh-100 d-flex flex-column justify-content-between">
+        <div class="vh-100 d-flex flex-column justify-content-between">
           {{>header}}
       <!-- Your code goes here -->      
+<<<<<<< HEAD
         <section id="profile" class="zi-1">
             <div class="container p-3 mt-20 bg-light text-center">
             {{#alertMessage}}
@@ -34,9 +35,42 @@
                     </div>
                     <div class="col-xs-12 col-md-3 col-lg-2">
                       <a href="/forgot" class="btn btn-primary btn-block m-2">Update password</a>
+=======
+        <section class="container my-5">
+            {{#successMessage}}
+            <div class="alert alert-success text-center zi-1">{{successMessage}}</div>
+            {{/successMessage}}
+            {{#alertMessage}}
+            <div class="alert alert-danger text-center zi-1">{{alertMessage}}</div>
+            {{/alertMessage}}                        
+            <div class="main-content zi-1">
+                <a href="/" class="back-arrow">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+
+                <div class="content-wrapper">
+                    <h2><strong>PROFILE</strong></h2>      
+
+                    <form class="mt-4 mt-md-5" method="POST">
+                        <input type="hidden" name="_method" value="PUT">	
+                        {{>profile}}     
+                        {{>user_address}}      
+                        
+                        <button type="submit" class="btn-link" id="profile-update">SAVE</button>            
+                    </form>  
+
+                    <div class="page-links">
+                        <a href="/verify" class="">Verify Email</a>
+
+                        <span class="mx-3">•</span>
+                        
+                        <a href="/forgot" class="">Update Password</a>
+>>>>>>> 26c57906a95d83d596bfbc62817132a9a246d75c
                     </div>
                 </div>
+                <!-- End content-wrapper -->
             </div>
+            <!-- End main-content -->
         </section>        
         {{>footer}}
         </div>
