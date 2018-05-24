@@ -11,9 +11,19 @@ On this platform people willing to donate blood can sign up with details of thei
 You can find the project's wireframe below which depicts the basic flow of our web application.
 
 **Mods**
-@imran @gaurav @vidit @shashank @utkarsh @sujan @soumya @hardiki
+- Imran Khan     (@strongSoda)
+- Vidit Kothari  (@viditkothari)
+- Shashank Kumar (@mcashashankkumar)
+- Sujan Patel    (@sujan-patel)
+- Utkarsh Gupta  (@utkarsh2102)
+- Gaurav Singh   (@gauravsinghaec)
+- Soumya Ranjan Behera  (@Soumya44)
+- Hardiki Devre   (@Hardiki)
 
-**Special Thanks to @akshit.udacity!!! **
+**Special Thanks to @akshit.udacity!!!**
+
+Please refer to this [paper](https://paper.dropbox.com/doc/JeevanRakht-WebD-Project-5VccFMnQ3eXriP5Q20lPP) here. It'll give you an insight of the project's working.
+In case of any doubts regarding the same, do feel free to contact any mod or co-mod.
 
 ## Project Wireframe
 ![wireframe - flow](https://user-images.githubusercontent.com/15084301/38657424-c22747d2-3e3d-11e8-9447-7862553d7142.jpg)
@@ -38,9 +48,10 @@ https://jeevanrakht.herokuapp.com/index.html
 
 ## Learn About Folder Structure (Check FAQ for more info on folder structure)
 ```
-Note : The folder structure may changes i.e we may include/exclude some folders/files as project progresses but the 
-overall sructure will remain as presented below:
+Note : The folder structure may changes i.e we may include/exclude some folders/files 
+as project progresses but the overall sructure will remain as presented below:
 ```
+
 ### Backend Part (node.js, express.js with MongoDB)
 * \bin          -- Application code listening for HTTP requests
 * \config       -- DB connection URL, OAuth2 secrets etc to be used in application
@@ -86,6 +97,10 @@ overall sructure will remain as presented below:
 * Procfile
 * Procfile.windows
 <br />[Learn about building, deploying and managing your apps on Heroku](https://devcenter.heroku.com/)
+
+### Generic Web Stack Diagram
+![image](https://user-images.githubusercontent.com/15084301/40181948-eb29ca52-5a07-11e8-8bac-3cb0506ccfe6.png)
+<br />[Know more about web stack](https://dzone.com/articles/why-full-stack-development-is-too-good-for-you-in)
 
 ## How to launch the app locally?
 * Step1 -- Fork the project repo and clone it in your local directory
@@ -183,13 +198,10 @@ Please refer to this [CONTRIBUTING guide](https://github.com/UdacityFrontEndScho
   - 404.hjs is default page to be shown to user if he/she visits any URL wrong path which is not the part of jeevanrakth application.
 
 ## Contributors
-- Utkarsh Gupta
-- Imran Khan
-- Vidit Kothari
-- Gaurav Singh
-- Shashank Kumar
-- Soumya Ranjan Behera
-- Sujan Patel
+You will find yourself in contributors list once your PR is approved and merged into jeevan-rakht rapo.
+Here you goes to find all the contributors:
+![image](https://user-images.githubusercontent.com/15084301/40287668-a3cb2df0-5ccc-11e8-8c23-13788e527c9c.png)
+
 
 ## Working Repo/Site
 - Repo : https://github.com/UdacityFrontEndScholarship/jeevan-rakht/

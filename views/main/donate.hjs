@@ -65,8 +65,34 @@
 =======
           
               <button class="btn-link" id='donate-submit'>BOOK</button>
+<<<<<<< HEAD
             </form>
 >>>>>>> 26c57906a95d83d596bfbc62817132a9a246d75c
+=======
+            </form>            
+            <!-- Existing Booking Details -->
+            <div id="stateC" style="display:unset">
+              <div class="table-responsive mt-4" >
+                <table class="table table-striped table-sm text-center" cellspacing="0" width="100%">
+                  <caption>Existing Booking</caption>
+                  <thead>
+                    <tr class="py-4">
+                      <th>Location</th>
+                      <th>When</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr class="py-4">
+                      <td id="old-bookcity">{{user.indiv.appointment.donor_city}}</td>
+                      <td id="old-bookdate">{{user.indiv.appointment.appointment_date}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- End table-responsive -->
+            </div>            
+>>>>>>> 92dce3e85a8152382ccaeb4842f7375436d07274
           </div>
           <!-- End donate-wrapper -->
         
@@ -79,5 +105,14 @@
     </div>
 
     {{>utilityJS}}
+    <script src="assets/js/moment.min.js"></script>
+    <script>
+      let booking_date = $('#old-bookdate').text();
+      let old_bookdate ="";
+      if(booking_date){
+        old_bookdate = moment(booking_date).format('DD/MM/YYYY');
+        $('#old-bookdate').text(old_bookdate);
+      }      
+    </script>
   </body>
 </html>

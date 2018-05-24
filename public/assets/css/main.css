@@ -703,73 +703,112 @@ body {
     background-color: #232323;
 }
 
-header {
-    float: left;
-    width: 100%;
-    min-height: 600px;
-    background-color: #232323;
-    z-index: 1;
-    position: relative;
-}
-
-nav {
-    float: left;
-    width: 100%;
-    background-color: #c62131;
-    padding: 15px 0px;
-    padding-top:  0;
-}
-
-.wrapper {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-nav li {
-    display: inline-block;
-    margin: 0 3px;
-    min-width: 90px;
-    width: 12%;
-}
-
-nav ul {
-    margin: 0px;
+.container-fluid{
     padding: 0;
-    list-style: none;
-    text-align: center;
 }
 
-nav a {
-    /* padding: 10px; */
-    height: 80px;
-    display: inline-block;
-    line-height: 80px;
-    min-width: 100%;
+.navbar {
+    background-color: #d20001 !important;
+    border: none !important;
+    font-family: 'Montserrat';
+    padding-top: 0;
+}
+
+.navbar .navbar-nav>li>a{
     color: #fff;
+    line-height: 80px;
     font-family: Spectral, serif;
-    font-size: 21px;
+    font-size: 1.2em;
+    padding: 10px;
 }
 
-nab .brand {}
+.navbar .navbar-nav>li.brand{
+    margin-top: 0;
+}
 
-nav .brand img {
-    background-color: #fff;
-    width: 200px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    margin-top: -3px;
+.navbar .navbar-nav>li.brand>a:hover {
+    text-decoration: none;
+    cursor: pointer;
+    border-bottom:none;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: #fff 2px solid;
+}
+
+.navbar-brand{
+    display: inline;
+    color: white !important;
+    font-family: "Montserrat";
+    font-weight: 700;
+}
+
+.navbar-toggler{
+    background-color: white !important;
+    border: none !important; 
+}
+
+nav li.brand img {
+    background: #fff;
+    padding: 10px;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+    display: inline-block;
+    max-height: 100px;
+}
+
+@media (max-width:992px){
+    .navbar .navbar-nav{
+        text-align: center;
+    }
+    .navbar .navbar-nav>li>a{
+        line-height: 50px;
+        font-size: 1em;
+        padding: 0;
+    }
+    .funnyMyths h2{
+        font-size: 2em !important;
+    }
+}
+
+@media (max-width:768px){
+    .donate-action{
+        margin-top: 80px;
+    }
+    .funnyMyths{
+        margin-top: 30px !important;
+    }
+    .funnyMyths h2{
+        margin-bottom: 40px;
+    }
+}
+
+.slider_wrapper>.row{
+    margin: 0;
 }
 
 .leftRedTop {
-    position: absolute;
-    width: 170%;
-    background-color: #c62131;
-    height: 100%;
+    position: relative;
+    top: -25px;
+    width: 100%;
+    background-color: rgba(210, 0, 1, 1);
+    height: 150px;
     z-index: -1;
-    transform: rotate(-6deg);
-    top: -85%;
-    left: -15%;
+}
+.leftRedTop:after{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: inherit;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform-origin: top right;
+    transform: skewY(-4deg);
 }
 
 .OneImage {
@@ -804,158 +843,208 @@ nav .brand img {
     font-family: 'Spectral', serif;
 }
 
-.OneImage em {
+.OneImage strong {
     font-style: normal;
     padding-right: 10px;
     text-transform:  uppercase;
     font-family: "Montserrat";
-    font-weight: 500;
+    font-weight: 700;
 }
 
-.OneImage:first-child {}
 
 .OneImage:last-child {
     margin-bottom: 32px;
 }
 
-.firstAction .OneImage {
-    border: 2px solid #fff;
+.OneImage {
+    border: 1px solid #fff;
 }
 
-.secondAction .OneImage {}
 
 .firstAction .OneImage label {
-    background-color: rgba(146, 0, 1, 0.75);
+    background-color: rgba(30, 30, 30, 0.85);
 }
 
 .secondAction .OneImage label {
-    background-color: rgba(255, 235, 59, 0.65);
+    background-color: rgba(255, 235, 59, 0.85);
+    color: rgb(30, 30, 30);
+}
+
+.firstAction .OneImage label:hover {
+    background-color: rgba(210, 0, 1, 0.87);
+    color: #ffffff;
+}
+
+.secondAction .OneImage label:hover {
+    background-color: rgba(210, 0, 1, 0.87);
+    color: #ffffff;
+}
+
+.backgroundTilted {
+    position: relative;
+    width: 100%;
+    margin-top: -300px;
+    background-color: rgba(210, 0, 1, 0.89);
+    height: 400px;
+    z-index: -1;
+}
+.backgroundTilted:after{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: inherit;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform-origin: bottom left;
+    transform: skewY(-6deg);
+}
+
+.backgroundTiltedRight {
+    position: relative;
+    width: 100%;
+    margin-top: -150px;
+    background-color: rgba(153, 12, 12,0.69);
+    height: 150px;
+    z-index: -1;
+}
+.backgroundTiltedRight:after{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: inherit;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform-origin: top right;
+    transform: skewY(6deg);
 }
 
 .funnyMyths {
     float: left;
     position: relative;
     width: 100%;
-    padding-top: 80px;
-    padding-bottom: 120px;
+    margin-top: 100px;
+    font-family: 'Montserrat';
 }
 
-.backgroundTilted {
-    width: calc(100% + 221px);
-    height: calc(100% + 208px);
-    position: absolute;
-    background-color: #c62131;
-    top: -55px;
-    left: -100px;
-    transform: rotate(3deg);
-    z-index: -1;
-}
-
-.backgroundTiltedRight {
-    width: calc(100% + 221px);
-    height: 480px;
-    position: absolute;
-    background-color: rgba(189, 32, 47, 0.89);
-    top: 130px;
-    left: -100px;
-    transform: rotate(-14deg);
-    z-index: -1;
-}
-
-.mythsPhoto {
-    border-radius: 20px;
-}
-
-.funnyMyths h2 {
-    text-align: center;
-    color: #fff;
-    font-weight: 600;
-    font-size: 3em;
-}
-
-.funnyMyths h2.emoji {
-    transform: rotate(90deg);
-    margin-top: 24px;
-}
-
-
-
-
-
-.vertical_center{
+.vertical-center {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.factsHead{
-    
+.mythsPhoto {
+    border-radius: 20px;
+    max-width: 80%;
+    height: auto;
+    margin: 5px auto;
 }
 
+.funnyMyths h2 {
+    color: #fff;
+    font-weight: 600;
+    font-size: 3em;
+}
+
+.emoji {
+    display: inline-block;
+    transform: rotate(90deg);
+    margin-top: 24px;
+}
 
 
 .contentDivision{
-max-width:  1000px;
-margin-left:  auto;
-margin-right:  auto;
-position:  relative;
-z-index: 9;
-color: #3e3c3c;
-background-color:  #fff;
-border-radius: 22px;
-padding: 75px 27px;
-margin-bottom: 100px;
+    max-width:  1000px;
+    margin-left:  auto;
+    margin-right:  auto;
+    position:  relative;
+    z-index: 9;
+    color: #3e3c3c;
+    background-color:  #fff;
+    border-radius: 22px;
+    padding: 75px 27px;
+    margin-bottom: 100px;
 }
 
-.whyDonate{
-float: left;
-width: 100%;
-background-color: #ad1c2a;
-padding-top: 64px;
-}
-.whyDonate ul{
-
-}
-.whyDonate ul{
-list-style:  none;
-}
-.whyDonate li{
-padding-left: 25px;
-position:  relative;
-}
-.whyDonate li>span{
-position:  absolute;
-left:  0;
-}
-.whyDonate h3{
-text-align:  center;
-text-shadow:  2px solid;
-text-shadow: -1px 0px 5px rgb(255, 255, 255);
-}
-.whyDonate h3+p{
-    max-width:  700px;
-    margin-left:  auto;
-    margin-right:  auto;
-    color: #fff;
-    margin-bottom: 3em;
-    margin-top: 2em;
+.sectionTitle {
+    float: left;
+    width: 100%;
+    background-color: rgba(153, 12, 12,0.82);
+    font-family: 'Montserrat'
 }
 
 
+.sectionTitle ul {
+    list-style:  none;
+    margin: 0 2em;
+    padding: 0;
+}
 
+.sectionTitle li {
+    padding-left: 25px;
+    position:  relative;
+}
 
+.sectionTitle li>span {
+    position:  absolute;
+    left:  0;
+}
 
+.sectionTitle h2 {
+    font-size: 3em;
+    font-weight: 700;
+    color: #ffffff;
+    text-align:  center;
+    text-transform: uppercase;
+}
 
+.sectionTitle h2+p {
+    max-width:  700px;
+    margin-left:  auto;
+    margin-right:  auto;
+    color: #fff;
+    margin-bottom: 3em;
+    margin-top: 2em;
+}
 
-
+.backgroundTiltedLeft_2 {
+    position: relative;
+    width: 100%;
+    top: 100px;
+    background: rgba(153, 12, 12,0.69);
+    height: 300px;
+    z-index: -1;
+}
+.backgroundTiltedLeft_2::after{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: inherit;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform-origin: top left;
+    transform: skewY(6deg);
+}
 
 /* Importing brand fonts Montserrat and Spectral */
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Spectral');
+
+/* footer css */
+
 footer {
     /* font-family: 'Montserrat', sans-serif; */
     font-family: 'Spectral', serif;
     background: #111111;
+    padding-top: 20px;
     color: #999999;
     width: 100%;
     position: relative;
@@ -1085,7 +1174,7 @@ footer .after-footer a:hover {
 .slider_wrapper {
     float: left;
     width: 100%;
-    margin-top: 130px;
+    margin-top: 50px;
 }
 
 .slider {
@@ -1376,7 +1465,7 @@ footer .after-footer a:hover {
     opacity: 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #c62131;
+    background-color: #d20001;
     border-radius: 50%;
 }
 

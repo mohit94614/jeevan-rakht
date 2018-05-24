@@ -42,7 +42,15 @@ app.set('partials', {
     footer: 'partials/footer',
     utilityJS: 'partials/utilityJS',
     oauth2_btns: 'partials/oauth2_btns',
+<<<<<<< HEAD
     oauth2_ajax: 'partials/oauth2_ajax'
+=======
+    oauth2_ajax: 'partials/oauth2_ajax',
+    user_address: 'partials/user_address',
+    profile: 'partials/profile',
+    google_mapJS: 'partials/google_mapJS',
+    locate_ajax: 'partials/locate_ajax'
+>>>>>>> 92dce3e85a8152382ccaeb4842f7375436d07274
 });
 app.use(logger('dev'));
 app.use(express.json());
